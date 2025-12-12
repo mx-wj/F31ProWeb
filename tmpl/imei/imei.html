@@ -1,0 +1,55 @@
+<div id="innerContainer">
+    <div class="row header-row">
+        <div class="col-xs-1">
+            <a href="#home">
+                <img alt="" src="img/arrow-back.png">
+            </a>
+        </div>
+        <div class="col-xs-11">
+            <div class="form-title">
+                <h1 data-trans='advanced_settings'></h1>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-2">
+            <div class="nav_right">
+                <ul>
+                    <li data-bind="sleepmode_display"><a href="#sleep_mode" data-trans="sleep_mode"></a></li>
+				<li><a href="#router_setting" data-trans="router_setting"></a></li>
+				<li><a href="#firewall" data-trans="firewall"></a></li>
+				<li><a href="#telnetd" data-trans="telnetd"></a></li>
+				<li><a href="#ussd" data-trans="USSD"></a></li>
+				<li><a href="#ddns" data-trans="DDNS"></a></li>
+				<li><a href="#ping_setting" data-trans="ping_setting"></a></li>
+				<li><a href="#break_detection" data-trans="break_detection"></a></li>
+				<li><a href="#l2tp" data-trans="vpn"></a></li>
+				<li><a href="#advance3111" data-trans="TTL"></a></li>
+				<li><a href="#advance3113" data-trans="ESIM/SIM"></a></li>
+                    <li><a data-trans="others" href="#others"></a></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="col-xs-10">
+            <form id='imei_form'>
+                <h3 class="form-title" data-trans="imei_modify"></h3>
+               
+                <div class="row form-group margin-top-20">
+                    <span data-trans="imei_current" class="col-xs-2"></span>
+                    <input id="txtCurrentIMEI" type="text" readonly="readonly" class="col-xs-3" data-bind='value: imei'>
+                </div>
+
+                <div class="row form-group margin-top-20">
+                    <span data-trans="imei_input" class="col-xs-2"></span>
+                    <input id="txtInputIMEI" type="text" class="col-xs-3" data-bind='value: imei_value' maxlength="15">
+                </div>
+
+                <div class="form-buttons">
+                    <input type="submit" class="btn btn-primary" data-trans="apply"/>
+                </div>
+                <!-- <input type="submit" class="btn btn-primary" style="float: right;margin-top: 20px;" data-trans="apply" > -->
+            </form>
+        </div>
+    </div>
+</div>

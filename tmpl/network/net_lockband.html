@@ -1,0 +1,158 @@
+<div id="innerContainer">
+    <div class="row header-row">
+        <div class="col-xs-1">
+            <a href="#home">
+                <img alt="" src="img/arrow-back.png">
+            </a>
+        </div>
+        <div class="col-xs-11">
+            <div class="form-title">
+                <h1 data-trans='network_settings'></h1>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-2">
+		<div class="nav_right">
+			<ul>
+			    <li><a href="#dial_setting" data-trans="dial_mode"></a></li>
+				<li ><a href="#net_select" data-trans="net_select"></a></li>
+				<li><a href="#apn_setting" data-trans="apn_setting"></a></li>
+				<li data-bind="visible: netlock_display" class="active"><a href="#net_lockband" data-trans="net_lockband"></a></li>
+				<li data-bind="visible: netlock_display"><a href="#net_lockpci" data-trans="net_lockpci"></a></li>
+
+				</ul>
+		</div>
+	    </div>
+
+	    <div class="col-xs-10">
+
+<form>
+<div class="form-body">
+	    <h3 class="form-title" data-trans="network_band_lock"></h3>
+    <div class="content">
+            <div class="row form-group">
+                <!--label class="col-xs-2 side-right" data-trans='network_band_select'></label-->
+					<div class="col-xs-2 label-absolute"  data-bind="visible:amt_band_1()=='1'">
+						<p id="roamBtn" class="checkbox floatleft margintop5 " data-bind="css:{'checkbox_selected': isBand1Select()=='1'},click: setBand1Select ,visible:amt_band_1()=='1'"  manualControl="true">
+							<input type="checkbox" id="isBand1Select" value="1" data-bind="checked:isBand1Select()=='1'" disabled/>
+						</p>
+						<label for="isBand1Select" data-trans="band1" class="update_inline floatleft lineheight25" data-bind="visible:amt_band_1()=='1'"></label>
+					</div>
+
+					<div class="col-xs-2 label-absolute" data-bind="visible:amt_band_2()=='1'">
+						<p id="roamBtn" class="checkbox floatleft margintop5 " data-bind="css:{'checkbox_selected': isBand2Select()=='1'},click: setBand2Select ,visible:amt_band_2()=='1'" manualControl="true">
+							<input type="checkbox" id="isBand2Select" value="1" data-bind="checked:isBand2Select()=='1'" disabled/>
+						</p>
+						<label for="isBand2Select" data-trans="band2" class="update_inline floatleft lineheight25" data-bind="visible:amt_band_2()=='1'"></label>
+					</div>
+
+					<div class="col-xs-2 label-absolute" data-bind="visible:amt_band_3()=='1'">
+						<p id="roamBtn" class="checkbox floatleft margintop5 " data-bind="css:{'checkbox_selected': isBand3Select()=='1'},click: setBand3Select ,visible:amt_band_3()=='1'" manualControl="true">
+							<input type="checkbox" id="isBand3Select" value="1" data-bind="checked:isBand3Select()=='1'" disabled/>
+						</p>
+						<label for="isBand3Select" data-trans="band3" class="update_inline floatleft lineheight25" data-bind="visible:amt_band_3()=='1'"></label>
+					</div>
+
+					<div class="col-xs-2 label-absolute" data-bind="visible:amt_band_4()=='1'">
+						<p id="roamBtn" class="checkbox floatleft margintop5 " data-bind="css:{'checkbox_selected': isBand4Select()=='1'},click: setBand4Select ,visible:amt_band_4()=='1'" manualControl="true">
+							<input type="checkbox" id="isBand4Select" value="1" data-bind="checked:isBand4Select()=='1'"/>
+						</p>
+						<label for="isBand4Select" data-trans="band4" class="update_inline floatleft lineheight25" data-bind="visible:amt_band_4()=='1'"></label>
+					</div>
+
+					<div class="col-xs-2 label-absolute" data-bind="visible:amt_band_5()=='1'">
+						<p id="roamBtn" class="checkbox floatleft margintop5 " data-bind="css:{'checkbox_selected': isBand5Select()=='1'},click: setBand5Select ,visible:amt_band_5()=='1'" manualControl="true">
+							<input type="checkbox" id="isBand5Select" value="1" data-bind="checked:isBand5Select()=='1'"/>
+						</p>
+						<label for="isBand5Select" data-trans="band5" class="update_inline floatleft lineheight25" data-bind="visible:amt_band_5()=='1'"></label>
+					</div>
+			</div>
+
+			<div class="row form-group">
+					<div class="col-xs-2 label-absolute" data-bind="visible:amt_band_7()=='1'">
+						<p id="roamBtn" class="checkbox floatleft margintop5 " data-bind="css:{'checkbox_selected': isBand7Select()=='1'},click: setBand7Select ,visible:amt_band_7()=='1'" manualControl="true">
+							<input type="checkbox" id="isBand7Select" value="1" data-bind="checked:isBand7Select()=='1'"/>
+						</p>
+						<label for="isBand7Select" data-trans="band7" class="update_inline floatleft lineheight25" data-bind="visible:amt_band_7()=='1'"></label>
+					</div>
+
+					<div class="col-xs-2 label-absolute" data-bind="visible:amt_band_8()=='1'">
+						<p id="roamBtn" class="checkbox floatleft margintop5 " data-bind="css:{'checkbox_selected': isBand8Select()=='1'},click: setBand8Select ,visible:amt_band_8()=='1'" manualControl="true">
+							<input type="checkbox" id="isBand8Select" value="1" data-bind="checked:isBand8Select()=='1'"/>
+						</p>
+						<label for="isBand7Select" data-trans="band8" class="update_inline floatleft lineheight25" data-bind="visible:amt_band_8()=='1'"></label>
+					</div>
+
+ 					<div class="col-xs-2 label-absolute" data-bind="visible:amt_band_17()=='1'">
+						<p id="roamBtn" class="checkbox floatleft margintop5 " data-bind="css:{'checkbox_selected': isBand17Select()=='1'},click: setBand17Select ,visible:amt_band_17()=='1'" manualControl="true">
+							<input type="checkbox" id="isBand17Select" value="1" data-bind="checked:isBand17Select()=='1'"/>
+						</p>
+						<label for="isBand17Select" data-trans="band17" class="update_inline floatleft lineheight25" data-bind="visible:amt_band_17()=='1'"></label>
+					</div>
+
+					<div class="col-xs-2 label-absolute" data-bind="visible:amt_band_20()=='1'">
+						<p id="roamBtn" class="checkbox floatleft margintop5 " data-bind="css:{'checkbox_selected': isBand20Select()=='1'},click: setBand20Select ,visible:amt_band_20()==1" manualControl="true">
+							<input type="checkbox" id="isBand20Select" value="1" data-bind="checked:isBand20Select()=='1'"/>
+						</p>
+						<label for="isBand20Select" data-trans="band20" class="update_inline floatleft lineheight25" data-bind="visible:amt_band_20()=='1'"></label>
+					</div>
+
+					<div class="col-xs-2 label-absolute" data-bind="visible:amt_band_28()=='1'">
+						<p id="roamBtn" class="checkbox floatleft margintop5 " data-bind="css:{'checkbox_selected': isBand28Select()=='1'},click: setBand28Select ,visible:amt_band_28()=='1'" manualControl="true">
+							<input type="checkbox" id="isBand28Select" value="1" data-bind="checked:isBand28Select()=='1'"/>
+						</p>
+						<label for="isBand28Select" data-trans="band28" class="update_inline floatleft lineheight25" data-bind="visible:amt_band_28()=='1'"></label>
+					</div>
+			</div>
+			<div class="row form-group">
+					<div class="col-xs-2 label-absolute" data-bind="visible:amt_band_34()=='1'">
+						<p id="roamBtn" class="checkbox floatleft margintop5 " data-bind="css:{'checkbox_selected': isBand34Select()=='1'},click: setBand34Select ,visible:amt_band_34()=='1'" manualControl="true">
+							<input type="checkbox" id="isBand34Select" value="1" data-bind="checked:isBand34Select()=='1'"/>
+						</p>
+						<label for="isBand34Select" data-trans="band34" class="update_inline floatleft lineheight25" data-bind="visible:amt_band_34()=='1'"></label>
+					</div>
+					<div class="col-xs-2 label-absolute" data-bind="visible:amt_band_38()=='1'">
+						<p id="roamBtn" class="checkbox floatleft margintop5 " data-bind="css:{'checkbox_selected': isBand38Select()=='1'},click: setBand38Select ,visible:amt_band_38()=='1'" manualControl="true">
+							<input type="checkbox" id="isBand38Select" value="1" data-bind="checked:isBand38Select()=='1'"/>
+						</p>
+						<label for="isBand38Select" data-trans="band38" class="update_inline floatleft lineheight25" data-bind="visible:amt_band_38()=='1'"></label>
+					</div>
+					<div class="col-xs-2 label-absolute" data-bind="visible:amt_band_39()=='1'">
+						<p id="roamBtn" class="checkbox floatleft margintop5 " data-bind="css:{'checkbox_selected': isBand39Select()=='1'},click: setBand39Select ,visible:amt_band_39()=='1'" manualControl="true">
+							<input type="checkbox" id="isBand39Select" value="1" data-bind="checked:isBand39Select()=='1'"/>
+						</p>
+						<label for="isBand39Select" data-trans="band39" class="update_inline floatleft lineheight25" data-bind="visible:amt_band_39()=='1'"></label>
+					</div>
+
+					<div class="col-xs-2 label-absolute" data-bind="visible:amt_band_40()=='1'">
+						<p id="roamBtn" class="checkbox floatleft margintop5 " data-bind="css:{'checkbox_selected': isBand40Select()=='1'},click: setBand40Select ,visible:amt_band_40()=='1'" manualControl="true">
+							<input type="checkbox" id="isBand40Select" value="1" data-bind="checked:isBand40Select()=='1'"/>
+						</p>
+						<label for="isBand40Select" data-trans="band40" class="update_inline floatleft lineheight25" data-bind="visible:amt_band_40()=='1'"></label>
+					</div>
+
+
+					<div class="col-xs-2 label-absolute" data-bind="visible:amt_band_41()=='1'">
+						<p id="roamBtn" class="checkbox floatleft margintop5 " data-bind="css:{'checkbox_selected': isBand41Select()=='1'},click: setBand41Select ,visible:amt_band_41()=='1'" manualControl="true">
+							<input type="checkbox" id="isBand41Select" value="1" data-bind="checked:isBand41Select()=='1'"/>
+						</p>
+						<label for="isBand41Select" data-trans="band41" class="update_inline floatleft lineheight25" data-bind="visible:amt_band_41()=='1'"></label>
+					</div>
+			</div>
+    </div>
+	<div class="form-buttons">
+        <input type="button" class="btn btn-primary" data-bind='click: savebandconfig' data-trans="apply"/>
+    </div>
+
+    <div class="form-note">
+        <div class="notes-title">&nbsp;</div>
+        <ul class="notes-content">
+			<li data-trans="lockband_operate_note"></li>
+        </ul>
+    </div>
+</div>
+</form>
+    </div>
+</div>
+</div>

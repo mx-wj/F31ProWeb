@@ -1,0 +1,96 @@
+<div id="innerContainer">
+    <div class="row header-row">
+        <div class="col-xs-1">
+            <a href="#home">
+                <img alt="" src="img/arrow-back.png">
+            </a>
+        </div>
+        <div class="col-xs-11">
+            <div class="form-title">
+                <h1 data-trans='network_settings'></h1>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-2">
+		<div class="nav_right">
+			<ul>
+			    <li><a href="#dial_setting" data-trans="dial_mode"></a></li>
+				<li ><a href="#net_select" data-trans="net_select"></a></li>
+				<li><a href="#apn_setting" data-trans="apn_setting"></a></li>
+				<li data-bind="visible: netlock_display"><a href="#net_lockband" data-trans="net_lockband"></a></li>
+				<li data-bind="visible: netlock_display" class="active"><a href="#net_lockpci" data-trans="net_lockpci"></a></li>
+			</ul>
+		</div>
+	    </div>
+
+	    <div class="col-xs-10">
+
+<form>
+<div class="form-body">
+	<h3 class="form-title" data-trans="network_pci_lock"></h3>
+	<div class="content">
+		<div class="row form-group">
+			<label class="col-xs-3 side-right" data-trans="current_register_pci_list"></label>
+			<label class="col-xs-6" data-bind="text: current_network_pci"></label>
+		</div>
+
+		<!--div class="row form-group">
+			<label class="col-xs-3 side-right" data-trans="current_network_pci_list"></label>
+			<label class="col-xs-6" data-bind="text: current_network_pci_list_info"></label>
+		</div-->
+
+		<div class="row form-group">
+			<label class="col-xs-3 side-right" data-trans="current_celllock_statue"></label>
+			<label class="col-xs-6" data-bind="text: celllockstatue"></label>
+		</div>
+
+		<!--div class = "row form-group" data-bind="visible:isAllowPciLock() == 'enable'"-->
+		<div class = "row form-group">
+			<label class = "col-xs-3" data-trans = "locked_arfrcn"></label>
+			<label class = "col-xs-9" data-bind ="text: locked_arfrcn_info"></label>
+		</div>
+
+		<div class = "row form-group">
+			<label class = "col-xs-3" data-trans = "locked_pci_id"></label>
+			<label class = "col-xs-9" data-bind ="text: locked_pci_info"></label>
+		</div>
+
+		<div class = "row form-group">
+			<label class = "col-xs-3" data-trans = "user_input_arfrcn"></label>
+			<input type = "text" name="input_pci" id="user_input_arfrcn" data-bind ="value: user_input_arfrcn" style="width:300px;height:23px"></input>
+		</div>
+		<div class = "row form-group">
+			<label class = "col-xs-3" data-trans = "user_input_pci"></label>
+			<input type = "text" name="input_pci" id="user_input_pci" data-bind ="value: user_input_pci_info" style="width:300px;height:23px"></input>
+		</div>
+
+		<div class="row form-group">
+			<label class="col-xs-3 side-right" data-trans="pci_lock_enbale"></label>
+			<div class = "col-xs-3">
+				<input type="radio" name="lock_switch" id ="lock_enable" value = "1" data-bind = "checked:isAllowPciLock,enable: isEnableflag"></input>
+				<label for = "lock_enable" data-trans = "locked" ></label>
+			</div>
+			<div class = "col-xs-3">
+				<input type="radio" name="lock_switch" id ="lock_disable" value = "0" data-bind = "checked:isAllowPciLock,enable: isEnableflag"></input>
+				<label for = "lock_disable" data-trans = "unlocked" ></label>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="form-buttons">
+        <input type="button" class="btn btn-primary" data-bind='click: savepciconfig' data-trans="apply">
+    </div>
+
+    <div class="form-note">
+        <div class="notes-title">&nbsp;</div>
+        <ul class="notes-content">
+			<li data-trans="lockpci_operate_note"></li>
+        </ul>
+    </div>
+</div>
+</form>
+    </div>
+</div>
+</div>

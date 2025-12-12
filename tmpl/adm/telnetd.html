@@ -1,0 +1,127 @@
+<div id="innerContainer">
+    <div class="row header-row">
+        <div class="col-xs-1">
+            <a href="#home">
+                <img alt="" src="img/arrow-back.png">
+            </a>
+        </div>
+        <div class="col-xs-11">
+            <div class="form-title">
+                <h1 data-trans='telnetd'></h1>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-2">
+		    <div class="nav_right">
+		    <ul>
+				<li data-bind="sleepmode_display"><a href="#sleep_mode" data-trans="sleep_mode"></a></li>
+				<li><a href="#router_setting" data-trans="router_setting"></a></li>
+				<li><a href="#firewall" data-trans="firewall"></a></li>
+				<li><a href="#telnetd" data-trans="telnetd"></a></li>
+				<li><a href="#ussd" data-trans="USSD"></a></li>
+				<li><a href="#ddns" data-trans="DDNS"></a></li>
+				<li><a href="#ping_setting" data-trans="ping_setting"></a></li>
+				<li><a href="#break_detection" data-trans="break_detection"></a></li>
+				<li><a href="#l2tp" data-trans="vpn"></a></li>
+				<li><a href="#advance3111" data-trans="TTL"></a></li>
+				<li><a href="#advance3113" data-trans="ESIM/SIM"></a></li>
+				<li><a data-trans="others" href="#others"></a></li>
+			</ul>
+			</div>
+		</div>
+
+	<div class="col-xs-10">
+	<form id="frmtelnetadb" role="form">
+	    <div class="form-body margin-top-20">
+
+	        <div class="content">
+	            <h3 class="form-title" data-trans="telnetd"></h3>
+
+	            <div class="row">
+	                <label class="col-xs-4 side-right" data-trans="telnet_switch"></label>
+
+	                <div class="col-xs-8">
+	                    <div class="row form-group">
+	                        <div class="col-xs-3">
+	                            <input type="radio" name="telnetMode" id="telnet_enable"
+	                                   data-bind="checked: telnetMode" value="1"/>
+	                            <label for="telnet_enable" data-trans="enable"></label>
+	                        </div>
+	                        <div class="col-xs-3">
+	                            <input type="radio" name="telnetMode" id="telnet_disable"
+	                                   data-bind="checked: telnetMode" value="0"/>
+	                            <label for="telnet_disable" data-trans="disable"></label>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+
+	            <div class="row">
+	                <label class="col-xs-4 side-right" data-trans="usb_switch"></label>
+
+	                <div class="col-xs-8">
+	                    <div class="row form-group">
+	                        <div class="col-xs-3">
+	                            <input type="radio" name="adbMode" id="adb_enable"
+	                                   data-bind="checked: adbMode" value="1"/>
+	                            <label for="adb_enable" data-trans="enable"></label>
+	                        </div>
+	                        <div class="col-xs-3">
+	                            <input type="radio" name="adbMode" id="adb_disable"
+	                                   data-bind="checked: adbMode" value="0"/>
+	                            <label for="adb_disable" data-trans="disable"></label>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+
+<!--	            <div class="row">-->
+<!--	                <label class="col-xs-4 side-right" data-trans="tw_tool"></label>-->
+<!--	                <div class="col-xs-8">-->
+<!--	                    <div class="row form-group">-->
+<!--	                        <div class="col-xs-3">-->
+<!--	                            <input type="radio" name="twtoolmode" id="twtool_enable"-->
+<!--	                                   data-bind="checked: twtoolmode" value="1"/>-->
+<!--	                            <label for="twtool_enable" data-trans="enable"></label>-->
+<!--	                        </div>-->
+<!--	                        -->
+<!--            	                <div class="col-xs-3">-->
+<!--	                            <input type="radio" name="twtoolmode" id=" twtool_disable"-->
+<!--	                                   data-bind="checked: twtoolmode" value="0"/>-->
+<!--	                            <label for=" twtool_disable" data-trans="disable"></label>-->
+<!--	                        </div>-->
+<!--	                        -->
+<!--	                    </div>-->
+<!--	                </div>-->
+<!--	            </div>-->
+
+<!--	            <div class="row">-->
+<!--	                <label class="col-xs-4 side-right" data-trans="log_capture_mode"></label>-->
+<!--	                <div class="col-xs-8">-->
+<!--	                    <div class="row form-group">-->
+<!--	                        <div class="col-xs-3">-->
+<!--	                            <input type="radio" name="twlogmode" id="usb_mode"-->
+<!--	                                   data-bind="checked: twlogmode" value="1"/>-->
+<!--	                            <label for="usb_mode" data-trans="enable"></label>-->
+<!--	                        </div>-->
+<!--	                        -->
+<!--            	                <div class="col-xs-3">-->
+<!--	                            <input type="radio" name="twlogmode" id=" net_mode"-->
+<!--	                                   data-bind="checked: twlogmode" value="0"/>-->
+<!--	                            <label for=" net_mode" data-trans="disable"></label>-->
+<!--	                        </div>-->
+<!--	                        -->
+<!--	                    </div>-->
+<!--	                </div>-->
+<!--	            </div>-->
+
+	            <div class="form-buttons">
+	                <input id="btnApply" type="submit" class="btn btn-primary" data-trans="apply"/>
+	            </div>
+			</div>
+
+		</div>
+	</form>
+</div>
+</div>

@@ -1,0 +1,76 @@
+<div id="innerContainer">
+    <div class="row header-row">
+        <div class="col-xs-1">
+            <a data-bind="attr: {href: '#home'}">
+                <img alt="" src="img/arrow-back.png">
+            </a>
+        </div>
+        <div class="col-xs-11">
+            <div class="form-title">
+                <h1>机卡互锁</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-1 margin-top-15">
+        </div>
+        <div class="col-xs-11">
+
+<form id="frmPin" data-bind="css: {'margin-top-20': isDataCard}">
+    <div class="form-body">
+        <div data-bind="visible:pageState()!=4">
+            <div class="content">
+                <div  data-bind="visible:currentPage() != '0' ">
+                    <form id='EsimSim_Pwd_form'>
+                        <h3 class="form-title" data-trans="机卡互锁"></h3>
+                        <div class="row form-group margin-top-50">
+                            <span data-trans="esim_sim_input" class="col-xs-2"></span>
+                            <input id="txtInputEsimSim" type="password" class="col-xs-3" data-bind='value: password' maxlength="24">
+                        </div>
+                        <div class="form-buttons">
+                            <input type="submit" class="btn btn-primary" data-trans="确认"  data-bind=" click: login"/>
+                        </div>
+                    </form>
+                </div>
+                <div id="showPi nWhenPinStaueNEQ3"  data-bind="visible:currentPage()==0">
+
+                    <div class="row form-group">
+                        <label class="col-xs-4 side-right" ></label>
+                        <div class="col-xs-2">
+                            <span data-trans="机卡互锁状态"></span>:
+
+                        </div>
+                        <div class="col-xs-2">
+                            <span data-bind='text:MACH_SIM_LOCK_type'></span>
+
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="col-xs-4 side-right" ></label>
+                        <div class="col-xs-2">
+                            <span data-trans="当前卡状态"></span>:
+
+                        </div>
+                        <div class="col-xs-2">
+                            <span data-bind='text:SIM_LOCK_type'></span>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="col-xs-4 side-right" ></label>
+                        <div class="col-xs-2">
+                        </div>
+                        <div class="col-xs-3"  data-bind="visible:SET_DISPLAY_LOCK()==1">
+                            <span style="color: brown;"  data-bind="visible:SET_DISPLAY_disable()== 1">解锁需要先断开网络连接！</span>
+                            
+                            <input  type="submit" class="btn btn-primary" data-trans="解除机卡互锁"
+                                   data-bind="click: set_MACH_SIM_LOCK,disable: SET_DISPLAY_disable()== 1"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+    </div>
+</div>
+</div>

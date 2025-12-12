@@ -1,0 +1,70 @@
+<div id="innerContainer">
+    <div class="row header-row">
+        <div class="col-xs-1">
+            <a href="#home">
+                <img alt="" src="img/arrow-back.png">
+            </a>
+        </div>
+        <div class="col-xs-11">
+            <div class="form-title">
+                <h1 data-trans='advanced_settings'></h1>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-2">
+            <div class="nav_right">
+                <ul>
+                    <li data-bind="sleepmode_display"><a href="#sleep_mode" data-trans="sleep_mode"></a></li>
+				<li><a href="#router_setting" data-trans="router_setting"></a></li>
+				<li><a href="#firewall" data-trans="firewall"></a></li>
+				<li><a href="#telnetd" data-trans="telnetd"></a></li>
+				<li><a href="#ussd" data-trans="USSD"></a></li>
+				<li><a href="#ddns" data-trans="DDNS"></a></li>
+				<li><a href="#ping_setting" data-trans="ping_setting"></a></li>
+				<li><a href="#break_detection" data-trans="break_detection"></a></li>
+				<li><a href="#l2tp" data-trans="vpn"></a></li>
+				<li><a href="#advance3111" data-trans="TTL"></a></li>
+				<li><a href="#advance3113" data-trans="ESIM/SIM"></a></li>
+                    <li><a data-trans="others" href="#others"></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-xs-10">
+            <form id='advance14Form'>
+                <h3 class="form-title" data-trans="break_detection"></h3>
+                <div class="row form-group  margin-top-20">
+                    <span data-trans='break_detection' class="col-xs-4"></span>
+                    <select style="height: 25px; width:73px;" data-transid='text'
+                        data-bind="options: selects, value: currentSelect, optionsText: 'text', optionsValue: 'value'"></select>
+                </div>
+                <div class="row form-group">
+                    <span data-trans="local_ip" class="col-xs-4"></span>
+                    <input type="text" data-bind='value: ip1' class="required ipAddress" required>
+                </div>
+                <div class="row form-group">
+                    <span data-trans="local_ip" class="col-xs-4"></span>
+                    <input type="text" data-bind='value: ip2' class="required ipAddress" required>
+                </div>
+                <div class="row form-group">
+                    <span data-trans="local_ip" class="col-xs-4"></span>
+                    <input type="text" data-bind='value: ip3' class="required ipAddress" required>
+                </div>
+                <div class="row form-group">
+                    <span data-trans="setInt_time" class="col-xs-4"></span>
+                    <input type="text" data-bind="value: intervals" class="required" required>
+                    <span data-trans="seconds" style="margin-left: 10px"></span>
+                </div>
+                <!-- <div class="row form-group">
+                    <span data-trans='repeat_time' class="col-xs-4"></span>
+                    <input type="text" data-bind="value: times" class="required" required>
+                    <span data-trans="times" style="margin-left: 10px"></span>
+                </div> -->
+                <button class="btn btn-primary" style="float: right;margin-top: 20px;" data-trans="apply"
+                    data-bind='click: apply'></button>
+                <!-- <input type="submit" class="btn btn-primary" style="float: right;margin-top: 20px;" data-trans="apply" > -->
+            </form>
+        </div>
+    </div>
+</div>

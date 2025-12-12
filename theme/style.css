@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Heading Pro';
+    src: local('Heading Pro Book Italic'), local('Heading-Pro-Book-Italic'),
+        url('HeadingPro-BookItalic.woff2') format('woff2'),
+        url('HeadingPro-BookItalic.woff') format('woff'),
+        url('HeadingPro-BookItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+  }
